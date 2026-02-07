@@ -24,9 +24,8 @@ const GameComponent = ({
               priority={true}
               height={150}
               width={150}
-              className={`rounded-lg md:w-full h-auto aspect-square object-cover ${
-                !stock ? "grayscale" : ""
-              }`}
+              className={`rounded-lg md:w-full h-auto aspect-square object-cover ${!stock ? "grayscale" : ""
+                }`}
             />
           </div>
           <div className="h-[20%]">

@@ -7,7 +7,6 @@ import axios from "axios";
 const Page = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [productsList, setProductsList] = useState([]);
   const [ghorProductsList, setGhorProductsList] = useState([]);
 
@@ -15,19 +14,16 @@ const Page = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/product`, {
-          headers: { "Content-Type": "application/json" },
-        });
+        const res = await axios.get(`/api/product`);
 
-        if (!res.ok) {
+        if (!res.data) {
           throw new Error("Failed to fetch products");
         }
 
-        const data = await res.json();
+        const data = res.data;
         setAllProducts(data);
       } catch (error) {
         console.error(error);
-        setError(error);
       } finally {
         setLoading(false);
       }
@@ -37,12 +33,10 @@ const Page = () => {
 
     const getGhorProductList = async () => {
       try {
-        const topupResponse = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/unipin/fetch-products`
-        );
-        const topupData = await topupResponse.json();
-        console.log(topupData.data[0]);
-        setGhorProductsList(topupData.data[0]);
+        const topupResponse = await axios.get(`/api/unipin/fetch-products`);
+        const topupData = topupResponse.data;
+        console.log(topupData);
+        setGhorProductsList(topupData);
       } catch (error) {
         console.error("Error fetching topup data:", error);
         setGhorProductsList([]);
@@ -51,13 +45,11 @@ const Page = () => {
 
     const fetchProductsList = async () => {
       try {
-        const res = await axios(
-          `${process.env.NEXT_PUBLIC_API_URL}/productslist`
-        );
+        const res = await axios.get(`/api/productslist`);
         if (!res.data) {
           throw new Error("Failed to fetch products list");
         }
-        setProductsList(res.data.data);
+        setProductsList(res.data);
       } catch (error) {
         console.error(error);
         setProductsList([]);
@@ -72,16 +64,11 @@ const Page = () => {
   if (loading) {
     return <Loader />;
   }
-
-  if (error || !allProducts) {
-    return <div>Error loading products</div>;
-  }
-
   return (
     <Products
-      ghorProductlist={ghorProductsList}
-      allProducts={allProducts}
-      productsList={productsList}
+      ghorProductlist={ghorProductsList ?? []}
+      allProducts={allProducts ?? []}
+      productsList={productsList ?? []}
     />
   );
 };

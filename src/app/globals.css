@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: linear-gradient(0deg,
-      rgba(45, 150, 255, 0.08),
-      rgba(45, 150, 255, 0.08)),
+  --background:
+    linear-gradient(0deg, rgba(45, 150, 255, 0.08), rgba(45, 150, 255, 0.08)),
     #110e19;
   --foreground: white;
 }
@@ -52,7 +51,7 @@ button {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #1F2228 inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1f2228 inset !important;
   -webkit-text-fill-color: white !important;
 }
 

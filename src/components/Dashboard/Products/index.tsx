@@ -170,7 +170,7 @@ const Products = ({ allProducts, productsList, ghorProductlist }) => {
         </Table>
       </TableContainer>
       <div className="flex mt-6  gap-8">
-        <div className="">
+        {productsList.length > 0 && <div className="">
           <h1 className="text-primary font-bold mb-2 text-xl">Products List</h1>
           <ul className="flex flex-col gap-4">
             {productsList?.map((product) => (
@@ -182,8 +182,8 @@ const Products = ({ allProducts, productsList, ghorProductlist }) => {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="">
+        </div>}
+        {ghorProductlist.length > 0 && <div className="">
           <h1 className="text-primary font-bold mb-2 text-xl">
             Philips Product List
           </h1>
@@ -196,7 +196,7 @@ const Products = ({ allProducts, productsList, ghorProductlist }) => {
               </li>
             ))}
           </ul>
-        </div>
+        </div>}
       </div>
     </div>
   );
