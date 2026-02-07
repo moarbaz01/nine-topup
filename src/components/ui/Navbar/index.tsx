@@ -61,12 +61,12 @@ const Navbar = () => {
   }
   return (
     <>
-      <div className="py-4  bg-gradient-to-b     from-primary/40  to-transaparent  sticky top-0 z-[999] h-[70px] flex items-center px-4 justify-center backdrop-blur-xl">
+      <div className="py-4 bg-gradient-to-b from-golden-600/30 via-golden-700/10 to-transparent sticky top-0 z-[999] h-[70px] flex items-center px-4 justify-center backdrop-blur-xl border-b border-golden-600/20">
         <div className="max-w-screen-xl w-full   flex items-center gap-4 justify-between ">
           <Link href="/" className="flex items-center  ">
             <Image
               src="/images/logo.png"
-              alt="Win Win Topup"
+              alt="Nine Topup"
               width={200}
               height={120}
               className=" h-[120px] w-full"
@@ -75,7 +75,7 @@ const Navbar = () => {
             {/* {!show && (
               <Image
                 src="/images/logo.gif"
-                alt="Win Win Topup"
+                alt="Nine Topup"
                 width={70}
                 height={70}
                 className=" h-full w-full md:hidden rounded-full"

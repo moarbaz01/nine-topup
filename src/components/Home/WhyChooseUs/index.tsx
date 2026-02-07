@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
         <section className="py-16 px-4  ">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-golden-400 mb-4">
                         ហេតុអ្វីត្រូវជ្រើសរើសយើង
                     </h2>
                     <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -47,10 +47,10 @@ export default function WhyChooseUs() {
                         return (
                             <div
                                 key={index}
-                                className="bg-secondary border border-gray-600/30 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:transform hover:scale-105 group"
+                                className="bg-card-bg border border-golden-600/30 rounded-xl p-6 hover:border-golden-400/60 hover:shadow-lg hover:shadow-golden-900/20 transition-all duration-300 hover:transform hover:scale-105 group"
                             >
-                                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors duration-300">
-                                    <Icon className="text-2xl text-primary" />
+                                <div className="w-16 h-16 bg-golden-500/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-golden-400/30 transition-colors duration-300">
+                                    <Icon className="text-2xl text-golden-400" />
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-3">
                                     {feature.title}

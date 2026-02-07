@@ -37,7 +37,7 @@ const PackageSection = ({
             </div>
           )}
 
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-4 md:gap-6 mt-4">
+          <div className="grid md:grid-cols-3 grid-cols-2 gap-4 md:gap-6 mt-4">
             {item.items.map((item, i) => (
               <CostItem
                 key={item.id}

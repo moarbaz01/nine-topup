@@ -11,7 +11,7 @@ const TrendingGames = async () => {
 
   return (
     <div className=" mx-4 md:mx-auto max-w-7xl mt-8 mb-6">
-      <div className="w-full bg-secondary border border-gray-600 p-4 rounded-lg ">
+      <div className="w-full bg-card-bg border border-golden-600/30 p-4 rounded-lg shadow-lg shadow-golden-900/20">
         <div className=" font-extrabold flex items-center gap-2 text-xl">
           <IoLogoGameControllerB className="text-2xl" />
           <span>GAME TOPUP</span>

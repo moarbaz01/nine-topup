@@ -4,9 +4,12 @@
 
 :root {
   --background:
-    linear-gradient(0deg, rgba(45, 150, 255, 0.08), rgba(45, 150, 255, 0.08)),
-    #110e19;
-  --foreground: white;
+    linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(255, 215, 0, 0.03)),
+    #0a0e1a;
+  --foreground: #ffffff;
+  --golden: #d4af37;
+  --golden-light: #ffd700;
+  --golden-dark: #b8860b;
 }
 
 body {

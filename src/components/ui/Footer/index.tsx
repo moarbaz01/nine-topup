@@ -12,7 +12,7 @@ const Footer = () => {
     return null;
   }
   return (
-    <footer className="  py-6  border-t border-gray-600 bg-secondary relative z-0 overflow-hidden ">
+    <footer className="py-6 border-t border-golden-600/30 bg-secondary relative z-0 overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-4  md:flex md:justify-between gap-8   ">
         <div className="flex flex-col md:flex-row justify-between md:w-full items-center space-y-4 md:space-y-0">
           {/* Contact and Social Media Section */}
@@ -81,7 +81,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="mt-2 ">
-              Copyright © {currentYear} - Win Win Topup. All Rights Reserved.
+              Copyright © {currentYear} - Nine Topup. All Rights Reserved.
             </p>
           </div>
         </div>
