@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: linear-gradient(0deg,
+      rgba(45, 150, 255, 0.08),
+      rgba(45, 150, 255, 0.08)),
+    #110e19;
+  --foreground: white;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  pointer-events: auto;
+}
+
+/* Position pagination dots over the images */
+.swiper-container {
+  position: relative;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  /* Adjust the vertical position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Center the dots horizontally */
+  z-index: 10;
+  /* Ensure dots are above the images */
+}
+
+/* Style the dots to make them white */
+.swiper-pagination-bullet {
+  background-color: white !important;
+  /* Make the dots white */
+}
+
+/* Style the active dot */
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+  /* Active dot will also be white */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1F2228 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Custom animations for gift box */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
